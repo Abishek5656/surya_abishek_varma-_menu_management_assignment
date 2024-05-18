@@ -30,4 +30,4 @@
 
 - https://www.loom.com/share/10e9293720bd4fdd84b00da5d315def0?sid=ef4af924-a0ac-4026-869e-1c43d3e29dcf
 
-- due to limit access i was I was unable to record the remaining part 
+- both the sub_category and items has similar feature of category so sharing the recording of only the category functions.
