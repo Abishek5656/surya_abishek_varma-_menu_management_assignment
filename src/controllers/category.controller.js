@@ -6,7 +6,6 @@ import { SubCategory } from "../models/sub-category.model.js";
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 const createCategory = asyncHandler(async (req, res) => {
-  w;
 
   const { name, description, taxApplicability, taxNumber, taxType } = req.body;
 
@@ -37,6 +36,7 @@ const createCategory = asyncHandler(async (req, res) => {
 
 // Get category
 const getCategories = asyncHandler(async (req, res) => {
+
   const categories = await Category.find({}).sort({ name: 1 });
 
   if (!categories || categories.length === 0) {
@@ -48,7 +48,6 @@ const getCategories = asyncHandler(async (req, res) => {
 
 // Get category by ID
 const getCategoryById = asyncHandler(async (req, res) => {
-  console.log("getCategoryYID");
 
   const { categoryId } = req.params;
 
@@ -70,7 +69,9 @@ const getCategoryById = asyncHandler(async (req, res) => {
 });
 
 // Edit category by ID
+
 const editCategoryById = asyncHandler(async (req, res) => {
+
   const { categoryId } = req.params;
 
   const { name, description } = req.body;
@@ -142,7 +143,6 @@ const updateCoverImage = asyncHandler(async (req, res) => {
 });
 
 const getSubcategoriesUnderCategories = asyncHandler(async (req, res) => {
-  console.log("getSubcategoriesUnderCategories");
 
   // Aggregation pipeline
   // $group method -> Groups the data based on the categoryName field. This means documents with the same categoryName will be grouped together.
@@ -185,4 +185,3 @@ export {
   updateCoverImage,
   getSubcategoriesUnderCategories,
 };
-w

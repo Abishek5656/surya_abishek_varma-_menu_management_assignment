@@ -7,7 +7,6 @@ import { Item } from "../models/item.model.js";
 
 const createSubCategory = asyncHandler(async (req, res) => {
 
-
   const { name, description, categoryName } = req.body;
 
   if (!categoryName) {
